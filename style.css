@@ -1,0 +1,176 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+
+/*Reset básico da página*/
+body {
+    font-family: "Roboto mono", sans-serif;
+    margin: 0;
+    background-color: blanchedalmond;
+}
+
+/*-------------------------------------------------------*/
+
+
+/*Estilização do menu principal*/
+.menu-principal ul {
+    list-style: none;
+    /*Remove os marcadores da lista*/
+    padding: 0;
+    /*Remove o padding padrão da lista*/
+    margin: 0;
+    /*Remove a margin padrão da lista*/
+    background-color: rgb(171, 143, 101);
+    display: flex;
+    justify-content: center;
+}
+
+/*Estilização dos itens da lista*/
+.menu-principal li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/*Estilização dos links*/
+.menu-principal a {
+    font-size: 18px;
+    display: block;
+    /*transforma o link em um bloco inteiro*/
+    padding: 15px 25px;
+    margin: 15px;
+    color: rgb(98, 87, 63);
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.menu-principal a:hover {
+    background-color: rgb(143, 127, 105);
+    color: black;
+    transition: 0.3s;
+}
+
+/*----------------------------------------------------*/
+
+h3 {
+    font-family: "Roboto mono", sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+/*Caixas links da página inicial*/
+.container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    text-decoration: none;
+    color: rgb(98, 87, 63);
+    background-color: rgb(148, 119, 76);
+    text-align: center;
+    width: 200px;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.container a:hover {
+    background-color: rgb(143, 127, 105);
+    color: black;
+}
+
+form {
+    text-align: center;
+}
+
+#nome {
+    font-family: "Roboto mono", sans-serif;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 25px;
+    border-radius: 6px;
+    border-color: rgba(222, 184, 135, 0.812);
+    background-color: rgb(184, 169, 150);
+    color: white;
+}
+
+#nome::placeholder {
+    color: white;
+}
+
+#email {
+    font-family: "Roboto mono", sans-serif;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 25px;
+    border-radius: 6px;
+    border-color: rgba(222, 184, 135, 0.812);
+    background-color: rgb(184, 169, 150);
+    color: white;
+}
+
+#email::placeholder {
+    color: white;
+}
+
+#mensagem {
+    font-family: "Roboto mono", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 75px;
+    border-radius: 6px;
+    resize: none;
+    border-color: rgba(222, 184, 135, 0.812);
+    background-color: rgb(184, 169, 150);
+    color: white;
+}
+
+#mensagem::placeholder {
+    color: white;
+}
+
+button {
+    font-family: "Roboto mono", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 95px;
+    height: 30px;
+    border-radius: 6px;
+    border-color: rgba(222, 184, 135, 0.812);
+    background-color: rgb(184, 169, 150);
+    color: white;
+
+}
+
+button:hover {
+    background-color: rgb(165, 207, 123);
+    transition: 0.3s;
+    color: black;
+}
+
+p {
+    width: 350px;
+    text-align: center;
+    margin: auto;
+}
+
+.listaprojetos {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(98, 87, 63);
+    text-decoration: none;
+
+}
+
+.listaprojetos:hover {
+    color: black;
+    transition: 1s;
+}

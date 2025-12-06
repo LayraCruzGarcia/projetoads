@@ -1,0 +1,86 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <title>Contato</title>
+</head>
+
+<body>
+    <header> <!--Cabeçalho da página-->
+        <nav class="menu-principal"><!--iniciando a criação do menu-->
+            <ul><!--lista não ordenada, dentro irá os li com cada link do menu-->
+                <!--Itens do menu, dentro de cada li colocar um a para a página que queremos-->
+                <li><a href="sobremim.html" target="_blank">Sobre mim</a></li>
+                <li><a href="formacao.html" target="_blank">Formação</a></li>
+                <li><a href="portifolio.html" target="_blank">Portifólio</a></li>
+                <li><a href="contato.html" target="_blank">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h3>Entre em Contato!</h3>
+    <form id="formularioContato" action="/enviarmensagem" method="post">
+        <div>
+            <input type="text" id="nome" name="nome" placeholder="Nome:" required>
+        </div>
+
+        <div>
+            <input type="email" id="email" name="email" placeholder="E-mail:" required>
+        </div><br>
+
+        <div>
+
+            <textarea id="mensagem" name="mensagem" placeholder="Deixe sua mensagem!" required rows="5"></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+        <p id="mensagemAgradecimento"
+            style="display:none; color: rgb(71, 132, 71); font-weight: bold; margin-top: 10px;">
+            Obrigado! Sua mensagem foi enviada com sucesso.
+        </p>
+    </form>
+
+
+
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+            // 1. Pega o formulário e a mensagem de agradecimento pelo ID
+            const formulario = document.getElementById( 'formularioContato' );
+            const msgAgradecimento = document.getElementById( 'mensagemAgradecimento' );
+
+            // Verifica se os elementos foram encontrados
+            if ( !formulario || !msgAgradecimento ) {
+                console.error( "Elementos do formulário ou da mensagem não encontrados." );
+                return;
+            }
+
+            // 2. Adiciona o ouvinte de evento 'submit'
+            formulario.addEventListener( 'submit', function ( event ) {
+                // **IMPEDE O ENVIO PADRÃO:**
+                // Se você não fizer isso, a página irá recarregar e o JS não funcionará.
+                event.preventDefault();
+
+                // --- 3. Execução ---
+
+                // a) Exibe a mensagem de agradecimento
+                msgAgradecimento.style.display = 'block';
+
+                // b) Limpa todos os campos do formulário
+                formulario.reset();
+
+                // c) Esconde a mensagem de agradecimento após 5 segundos
+                setTimeout( function () {
+                    msgAgradecimento.style.display = 'none';
+                }, 5000 ); // 5000 milissegundos = 5 segundos
+            } );
+        } );
+    </script>
+
+</body>
+
+</html>
